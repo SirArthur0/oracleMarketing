@@ -1,0 +1,157 @@
+/* Font and base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #006ba6;
+    text-decoration: none;
+  }
+  
+  /* Header */
+  .main-header {
+    background: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .main-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .main-header p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .cost-estimator {
+    margin-top: 20px;
+  }
+  
+  .cost-estimator span {
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+  
+  .cost-estimator button {
+    background-color: #00758f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cost-estimator button:hover {
+    background-color: #005f73;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .benefits h2 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+  
+  .benefit-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-top: 4px solid #00a885;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+  
+  .card h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 1em;
+  }
+  
+  /* Using Universal Credits Section */
+  .usage {
+    padding: 80px 20px;
+    background: #f1f1f1;
+  }
+  
+  .usage h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .usage-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .usage-text {
+    flex: 2;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .usage-text p {
+    margin-bottom: 18px;
+  }
+  
+  .usage-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .usage-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .benefit-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .usage-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .usage-text {
+      text-align: left;
+    }
+  }
