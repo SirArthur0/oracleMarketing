@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Oracle Object Storage</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; color: #333;">
+
+  <!-- Cabeçalho -->
+   <div style="
+    background-image: url('https://raw.githubusercontent.com/heloomendess/oracleScan/refs/heads/main/Group%201%20(1).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #2b4d5f;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <div style="padding: 10px 20px; border-radius: 10px;">
+      <h1 style="margin: 0 0 10px 0; text-align: center">Oracle Object Storage</h1>
+      <p style="font-size: 14px; margin: 0;">Saiba como usar o Object Storage para armazenar e acessar facilmente um volume ilimitado de dados a um baixo custo.</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div style="padding: 30px; max-width: 900px; margin: auto; background-color: white;">
+
+    <p>
+      O serviço Object Storage é uma plataforma de armazenamento de alto desempenho em escala de internet que oferece durabilidade de dados confiável e econômica. O serviço Object Storage pode armazenar uma quantidade ilimitada de dados não estruturados de qualquer tipo de conteúdo, incluindo dados analíticos e conteúdo avançado, como imagens e vídeos.
+    </p>
+
+    <p>
+      Com o serviço Object Storage, você pode armazenar e recuperar dados de forma segura e protegida diretamente da internet ou de dentro da plataforma de nuvem. O serviço <a href="https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/">Object Storage</a> oferece várias <a href="https://docs.oracle.com/pt-br/iaas/Content/Object/Concepts/objectstorageoverview.htm#accessways">interfaces de gerenciamento</a> que permitem gerenciar facilmente o armazenamento em escala. A elasticidade da plataforma permite que você comece em pequena escala e dimensione perfeitamente, sem prejudicar o desempenho ou a confiabilidade do serviço.
+    </p>
+
+    <p>
+      O Object Storage é um serviço regional e não está vinculado a nenhuma instância de computação específica. Você pode acessar dados de qualquer lugar dentro ou fora do contexto do Oracle Cloud Infrastructure, desde que tenha conectividade com a internet e possa acessar um dos pontos finais do serviço Object Storage. Os limites de autorização e recurso serão discutidos posteriormente neste tópico.
+    </p>
+
+    <p>
+      O Oracle Cloud Infrastructure suporta várias <a href="https://docs.oracle.com/pt-br/iaas/Content/Object/Concepts/understandingstoragetiers.htm#storage-tiers">camadas de armazenamento</a> que oferecem flexibilidade de custo e desempenho. Padrão é a camada de armazenamento padrão para buckets do serviço Object Storage.
+    </p>
+
+    <p>
+      O serviço Object Storage também suporta acesso privado de recursos do Oracle Cloud Infrastructure em uma VCN por meio de um gateway de serviço. Um gateway de serviço permite conectividade com os pontos finais públicos do serviço Object Storage de endereços IP privados em sub-redes privadas. Por exemplo, você pode fazer backup dos sistemas de BD para um bucket do serviço Object Storage pelo backbone do Oracle Cloud Infrastructure em vez de pela internet. Opcionalmente, você pode usar políticas do serviço IAM para controlar quais VCNs ou intervalos de endereços IP podem acessar o serviço Object Storage. Consulte <a href="https://docs.oracle.com/pt-br/iaas/Content/Network/Tasks/servicegateway.htm">Acesso aos Serviços Oracle: Gateway de Serviço</a> para obter detalhes.
+    </p>
+
+    <p>
+      O serviço Object Storage é Always Free. Para obter mais informações sobre recursos Always Free, incluindo capacidades e limitações, consulte <a href="https://docs.oracle.com/pt-br/iaas/Content/FreeTier/freetier.htm">Oracle Cloud Infrastructure Free Tier</a>.
+    </p>
+
+    <h2 style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center">Características do Serviço Object Storage</h2>
+    <p style="text-align: center;" >O serviço Object Storage oferece os seguintes recursos:</p>
+
+    <!-- Bloco: Consistência Forte -->
+    <div style="background-color: #6D8F9C; padding: 20px; color: white; margin-top: 20px; border-radius: 10px;">
+      <h3>CONSISTÊNCIA FORTE</h3>
+      <p>Quando uma solicitação de leitura é feita, o serviço Object Storage sempre fornece a cópia mais recente dos dados que foram gravados no sistema.</p>
+    </div>
+
+    <!-- Bloco: Durabilidade -->
+    <div style="background-color: #214953; color: white; padding: 20px; margin-top: 20px; border-radius: 10px;">
+      <h3>DURABILIDADE</h3>
+      <p>
+        O Object Storage é um serviço regional. Os dados são armazenados de forma redundante em vários servidores de armazenamento. O serviço Object Storage monitora ativamente a integridade de dados usando somas de verificação e detecta e repara automaticamente dados corrompidos. O serviço Object Storage monitora ativamente e garante a redundância dos dados. Se uma perda de redundância for detectada, o serviço Object Storage criará, automaticamente, mais cópias de dados. Para obter mais detalhes sobre a durabilidade do serviço Object Storage, consulte
+        <a href="https://www.oracle.com/cloud/storage/object-storage/faq/" style="color: #ffff;">Perguntas Mais Frequentes do Serviço Object Storage</a>.
+      </p>
+    </div>
+
+    <!-- Bloco: Metadados Personalizados -->
+    <div style="background-color: #6D8F9C; padding: 20px; color: white; margin-top: 20px; border-radius: 10px;">
+      <h3>METADADOS PERSONALIZADOS</h3>
+      <p>
+        Você pode definir seus próprios metadados extensivos como pares de chave/valor para qualquer finalidade. Por exemplo, você pode criar tags descritivas para objetos, recuperar essas tags e classificar pelos dados. Você pode designar metadados personalizados a objetos e buckets usando a CLI ou o SDK do Oracle Cloud Infrastructure.
+        Consulte <a href="https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/sdks.htm" style="color: #ffff;">SDKs e a CLI</a> para obter detalhes.
+      </p>
+    </div>
+
+    <!-- Bloco: Segurança -->
+    <div style="background-color: #214953; color: white; padding: 20px; margin-top: 20px; margin-bottom: 40px; border-radius: 10px;">
+      <h3>SEGURANÇA</h3>
+      <p>
+        O serviço Object Storage garante a segurança dos dados armazenados usando criptografia de dados. A criptografia de dados é um método usado para proteger a confidencialidade dos dados. Os dados podem ser acessados usando chaves de decriptografia criadas ao fazer upload de objetos para um bucket. Isso é usado em conjunto com políticas de IAM que autenticam os usuários que executam a tarefa.
+        Consulte <a href="https://docs.oracle.com/pt-br/iaas/Content/Object/Tasks/encryption.htm#data-encryption" style="color: #ffff;">Criptografia de Dados do Serviço Object Storage</a> para obter detalhes.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
